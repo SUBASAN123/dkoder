@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', var(--font-sans);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-dk-yellow: #FFD000;
+  --color-dk-yellow-hover: #F0C400;
+  --color-dk-yellow-light: #FFF9DB;
+  --color-dk-purple: #7C3AED;
+  --color-dk-purple-vibrant: #8B5CF6;
+  --color-dk-purple-dark: #120B24;
+  --color-dk-purple-deep: #0D0818;
+  --color-dk-purple-surface: #1A1230;
+  --color-dk-purple-subtle: #FAF7FF;
+  --color-dk-purple-border: #E6DEF5;
+}
+
+/* Custom scrollbar with subtle violet and gold touches */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CCE8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B9A5D6;
+}
+
+/* Glow utility */
+.glow-purple-yellow {
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.25), 0 4px 12px -2px rgba(255, 208, 0, 0.2);
+}
+
+.glow-purple {
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.35);
+}
+
+.glow-yellow {
+  box-shadow: 0 8px 24px -6px rgba(255, 208, 0, 0.35);
+}
+
+/* Subtle grid background */
+.bg-purple-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(124, 58, 237, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 5s ease-in-out 1.5s infinite;
+}
+
